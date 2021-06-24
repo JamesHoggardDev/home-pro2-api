@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  frequency: MyString
+  image: MyString
+
+two:
+  description: MyString
+  frequency: MyString
+  image: MyString
