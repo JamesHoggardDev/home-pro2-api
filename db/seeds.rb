@@ -10,10 +10,6 @@
 # List.destroy_all
 
 # Exercise.destroy_all
-
-# binding.pry
-
-
 exercises = [
     {
       frequency: "Complete 10 reps, 1-2 sets a day, 4-5x/wk",
@@ -135,7 +131,5 @@ exercises = [
     List.create!(name: "Use good posture throughout the exercise", exercise_id: Exercise.all.distinct.sample.id, user_id: User.all.sample.id)
     List.create!(name: "Remember to take breaks as needed", exercise_id: Exercise.all.distinct.sample.id, user_id: User.all.sample.id)
   end
-
-#these can go in the models an instance method tha gets called during redirect to user page
 
   puts 'Seeded'
