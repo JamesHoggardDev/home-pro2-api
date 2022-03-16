@@ -6,9 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # puts 'Deleting Seeds'
-
 # List.destroy_all
-
 # Exercise.destroy_all
 exercises = [
     {
@@ -70,7 +68,6 @@ exercises = [
       description: "Supine Abdominal Draw In: Lie on your back on a table or mat, knees up with feet flat on table/mat; pull the abs in and push your lower back to the table/mat. Repeat 20 repetitions.", 
       image: "https://static.wixstatic.com/media/c503de_465c8730cfac40bd989209d199e662c5~mv2.gif"
     },
-    #////
     {
       frequency: "Complete 12-15 reps 2 sets a day, 3x/wk",
       description: "Scapular Depressions: Move your shoulder blades down towards your heels and hold for 3-5secs. Relax and repeat.
@@ -127,9 +124,11 @@ exercises = [
       Exercise.create!(exercise)
   end
 
-  25.times do
-    List.create!(name: "Use good posture throughout the exercise", exercise_id: Exercise.all.distinct.sample.id, user_id: User.all.sample.id)
-    List.create!(name: "Remember to take breaks as needed", exercise_id: Exercise.all.distinct.sample.id, user_id: User.all.sample.id)
+  5.times do
+    List.create!(name: "Use good posture throughout the exercise", exercise_id: Exercise.all.distinct.sample.id, user_id: 1)
+    List.create!(name: "Remember to take breaks as needed", exercise_id: Exercise.all.distinct.sample.id, user_id: 2)
+    List.create!(name: "Use good posture throughout the exercise", exercise_id: Exercise.all.distinct.sample.id, user_id: 3)
+    List.create!(name: "Remember to take breaks as needed", exercise_id: Exercise.all.distinct.sample.id, user_id: 4)
   end
 
   puts 'Seeded'

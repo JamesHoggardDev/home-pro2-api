@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
     def index
         @users = User.all
         if @users
@@ -16,7 +15,6 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
-
        if @user
           render json: {
             user: @user
@@ -31,15 +29,7 @@ class UsersController < ApplicationController
       
       def create
         @user = User.new(user_params)
-       
         if @user.save
-
-          unless @user.lists.length === 5
-            6.times do
-              @user.lists.push(List.all.sample)
-            end
-          end
-         
           login!
           render json: {
             status: :created,
@@ -53,16 +43,14 @@ class UsersController < ApplicationController
         end
       end
 
-      def destroy
-          @user = User.find(params[:id])
-
-          @user.lists.each do |list|
-            list.destroy!
-          end
-    
-          @user.destroy!
-          render json: {}
-      end 
+      # def destroy
+      #     @user = User.find(params[:id])
+      #     @user.lists.each do |list|
+      #       list.destroy!
+      #     end
+      #     @user.destroy!
+      #     render json: {}
+      # end 
 
     private
       

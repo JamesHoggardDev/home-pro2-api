@@ -11,6 +11,7 @@ gem 'bcrypt'
 gem 'rack-cors'
 gem('pry-byebug')
 gem "figaro"
+gem 'rufo'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'

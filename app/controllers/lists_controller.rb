@@ -11,7 +11,7 @@ class ListsController < ApplicationController
         if @list
             render json: @list, status: :created, location: @list
         else
-            render json: @list.errors, status: :unprocessable_entity  #CK
+            render json: @list.errors, status: :unprocessable_entity 
         end
     end
 
@@ -33,7 +33,6 @@ class ListsController < ApplicationController
     # def destroy
     #     @list.destroy
     # end
-    
 
     private
 

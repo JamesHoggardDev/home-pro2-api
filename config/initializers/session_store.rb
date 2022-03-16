@@ -1,5 +1,5 @@
 if Rails.env === 'production' 
-    Rails.application.config.session_store :cookie_store, key: 'home-pro2'#, domain: 'your-frontend-domain'
+    Rails.application.config.session_store :cookie_store, key: '_home-pro2-api'#, domain: 'your-frontend-domain'
   else
-    Rails.application.config.session_store :cookie_store, key: 'home-pro2' 
+    Rails.application.config.session_store :cookie_store, key: '_home-pro2-api' 
   end

@@ -11,8 +11,6 @@ class ExercisesController < ApplicationController
 
     def create
         @new_exercise = Exercise.create!(exercise_params)
-        # binding.pry
-        
         render json: @new_exercise
     end
     
@@ -26,8 +24,7 @@ class ExercisesController < ApplicationController
             render json: @exercise.errors, status: :unprocessable_entity
         end
     end
-
-
+    
     private
 
     def exercise_params
