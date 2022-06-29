@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.1'
+ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
@@ -10,9 +10,10 @@ gem 'pg', '~> 1.1'
 gem 'bcrypt'
 gem 'rack-cors'
 gem('pry-byebug')
+gem 'pry-rails'
 gem "figaro"
 gem 'rufo'
-
+gem 'net-smtp'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

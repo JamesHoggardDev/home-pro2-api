@@ -127,8 +127,8 @@ exercises = [
   5.times do
     List.create!(name: "Use good posture throughout the exercise", exercise_id: Exercise.all.distinct.sample.id, user_id: 1)
     List.create!(name: "Remember to take breaks as needed", exercise_id: Exercise.all.distinct.sample.id, user_id: 2)
-    List.create!(name: "Use good posture throughout the exercise", exercise_id: Exercise.all.distinct.sample.id, user_id: 3)
-    List.create!(name: "Remember to take breaks as needed", exercise_id: Exercise.all.distinct.sample.id, user_id: 4)
+    List.create!(name: "Use good posture throughout the exercise", exercise_id: Exercise.all.distinct.sample.id, user_id: 1)
+    List.create!(name: "Remember to take breaks as needed", exercise_id: Exercise.all.distinct.sample.id, user_id: 2)
   end
 
   puts 'Seeded'
